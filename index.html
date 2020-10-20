@@ -10,22 +10,26 @@
 <body>
 
     <header>
+        <img id="banner" src="./assets/images/mybanner.jpg" alt="Banner vector created by upklyak - www.freepik.com"></figure>
+        
         <h1>Jared Ackley</h1>
-        <figure><img id="banner" src="./assets/images/mybanner.jpg" alt="Banner vector created by upklyak - www.freepik.com"></figure>
-        <nav>
-            <ul>
-                <li>About Me</li>
-                <li>My Portfolio</li>
-                <li>My Resume</li>
-                <li>Contact Me</li>
-            </ul>
-        </nav>
+
+        <figure><img class="myPic" src="./assets/images/mypicture.png" alt="Picture of Me"></figure>
+
     </header>
+
+    <nav>
+        <ul>
+            <li>About Me</li>
+            <li>My Portfolio</li>
+            <li>My Resume</li>
+            <li>Contact Me</li>
+        </ul>
+    </nav>
 
     <main>
             <section id="aboutMe">
                 <h2>About Me</h2>
-                <figure ><img id="myPicture" src="./assets/images/mypicture.png" alt="Picture of Me" /></figure>
                 <p>
                     I have been in the transplant industry since 2011. My career started at Indiana Donor Network (IDN) in 2011 as an Organ 
                     Procurement Coordinator. During my time at IDN, I managed all aspects of the organ procurement process. I also served on 
@@ -45,6 +49,7 @@
 
             <section id="myPortfolio">
                 <h2>My Portfolio</h2>
+                <figure class="portfolioMainBlock">
                     <div>
                         <figure>
                             <h3>Project 1</h3>
@@ -80,12 +85,12 @@
                             <h3>Project 6</h3>
                         </figure>
                     </div>
-                    
+                </figure>  
             </section>
 
             <section id="myResume">
                 <h2>My Resume</h2>
-                <ul>
+                <ul class="resumeMainBlock">
                     <li>
                        <h3> Work Experience</h3>
                         <ul>
@@ -192,22 +197,24 @@
 
     </main>
 
+    <nav>
+        <ul>
+            <li>About Me</li>
+            <li>My Portfolio</li>
+            <li>My Resume</li>
+            <li>Contact Me</li>
+        </ul>
+       
+    </nav>
+
     <footer>
-        <nav>
+        <p>
+            Outside Image Resources
             <ul>
-                <li>About Me</li>
-                <li>My Portfolio</li>
-                <li>My Resume</li>
-                <li>Contact Me</li>
+                <!-- For Banner <a href="https://www.freepik.com/vectors/banner">Banner vector created by upklyak - www.freepik.com</a> -->
+                <li class="resource">Banner<span class="bannerRes"><a href="https://www.freepik.com/vectors/banner">Banner vector created by upklyak - www.freepik.com</a></span></li> 
             </ul>
-            <p>
-                Image Resources
-                <ul>
-                    <!-- For Banner <a href="https://www.freepik.com/vectors/banner">Banner vector created by upklyak - www.freepik.com</a> -->
-                    <li>Banner</li> 
-                </ul>
-            </p>
-        </nav>
+        </p>
     </footer>
 
 </body>

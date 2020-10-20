@@ -1,9 +1,167 @@
-#myPicture {
-    width: 100px;
-    height: 90px;
+:root {
+    --fontColor: black;
 }
 
-#banner {
-    width: 100%;
-    height: 400px;
+html{
+    font-size: 62.5%;
 }
+body{
+
+}
+header {
+    position: relative;
+    display: flex;
+    height: 20rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: white;
+}
+
+a{
+    color: var(--fontColor)
+}
+
+header h1{
+    position: absolute;
+    left: 10%;
+}
+
+header figure{
+    position: absolute;
+    right: 10%;
+}
+
+nav {
+    border-style: solid;
+    
+    color: white; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem; 
+}
+
+nav ul li {
+    border-style: solid;
+    border-color: black;
+    width: 25%;
+    border-width: .1rem;
+    border-radius: 2.5rem;
+    text-align: center;
+    background: darkorchid;
+    margin: .2rem;
+}
+
+nav ul li:hover{
+    background-color: rgb(233, 173, 245);
+}
+
+header figure img{
+    height: 125px;
+    width: 150px;
+
+}
+#banner {
+    height: 200px;
+    width: 100%;
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+    width: 15%;
+    justify-content: center;
+    text-emphasis: ;
+}
+main section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+}
+
+#aboutMe p{
+    width: 85%;
+    border-left: black;
+    border-style: solid;
+    padding: 1rem;
+    font-size: 2rem;
+}
+#myPortfolio {
+
+}
+.resumeMainBlock {
+    width: 85%;
+    border-left: black;
+    border-style: solid;
+    padding: 1rem;
+}
+
+.resumeMainBlock ul {
+    padding: 1rem;
+}
+
+.resumeMainBlock li h3 {
+    font-size: 2.5rem;
+}
+
+.resumeMainBlock li ul li {
+    font-size: 2rem;
+}
+
+.resumeMainBlock li ul p{
+    font-size: 1.7rem;
+    padding: 1rem;
+}
+
+.portfolioMainBlock {
+    width: 85%;
+    border-left: black;
+    border-style: solid;
+    padding: 1rem;
+}
+
+#contactMe ul{
+    width: 85%;
+    border-left: black;
+    border-style: solid;
+    padding: 1rem;
+}
+
+#contactMe ul li {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.bannerRes{
+    display: none;
+}
+
+.resource {
+    display: flex;
+    padding: 1rem;
+}
+
+.resource:hover {
+    color: white
+}
+.resource:hover .bannerRes {
+    display: block;
+}
+
