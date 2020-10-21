@@ -6,11 +6,39 @@
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Jared Ackley Portfolio</title>
-</head>
-<body>
 
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+</head>
+<body class="bg">
     <header>
-        <img id="banner" src="./assets/images/mybanner.jpg" alt="Banner vector created by upklyak - www.freepik.com"></figure>
         
         <h1>Jared Ackley</h1>
 
@@ -20,12 +48,48 @@
 
     <nav>
         <ul>
-            <li>About Me</li>
-            <li>My Portfolio</li>
-            <li>My Resume</li>
-            <li>Contact Me</li>
+            <li> <a class="navAnchor" href="#aboutMe">About Me</a></li>
+            <li> <a class="navAnchor" href="#myPortfolio">My Portfolio</a></li>
+            <li> <a class="navAnchor" href="#myResume">My Resume</a></li>
+            <li> <a class="navAnchor" href="#contactMe">Contact Me</a></li>
+
         </ul>
     </nav>
+
+    <section class="slideshow-container">
+          <div class="mySlides">
+            <q>"We have to continually be jumping off cliffs and developing our wings on the way down."</q>
+            <p class="author">- Kurt Vonnegut</p>
+          </div>
+          
+          <div class="mySlides">
+            <q>"Others have seen what is and asked why. I have seen what could be and asked why not."</q>
+            <p class="author">- Pablo Picasso</p>
+          </div>
+          
+          <div class="mySlides">
+            <q>"Imagination is everything. It is the preview of life's coming attractions."</q>
+            <p class="author">- Albert Einstein</p>
+          </div>
+
+          <div class="mySlides">
+            <q>"Creativity takes courage."</q>
+            <p class="author">Henry Matisse</p>
+          </div>
+
+          <div class="mySlides">
+            <q>"I never made one of my discoveries through the process of rational thinking."</q>
+            <p class="author">Albert Einstein</p>
+          </div>
+    </section>
+
+    <section class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </section>
 
     <main>
             <section id="aboutMe">
@@ -50,41 +114,42 @@
             <section id="myPortfolio">
                 <h2>My Portfolio</h2>
                 <figure class="portfolioMainBlock">
-                    <div>
+                    <a class="project" target="_blank" href="/inprogress.html">
                         <figure>
                             <h3>Project 1</h3>
                         </figure>
-                    </div>
+                    </a>
 
-                    <div>
+                    <a class="project" target="_blank" href="/inprogress.html">
                         <figure>
                             <h3>Project 2</h3>
                         </figure>
-                    </div>
+                    </a>
 
-                    <div>
+                    <a class="project" target="_blank" href="/inprogress.html">
                         <figure>
                             <h3>Project 3</h3>
                         </figure>
-                    </div>
+                    </a>
 
-                    <div>
+                    <a class="project" target="_blank" href="/inprogress.html">
                         <figure>
                             <h3>Project 4</h3>
                         </figure>
-                    </div>
+                    </a>
 
-                    <div>
+                    <a class="project" target="_blank" href="/inprogress.html">
                         <figure>
                             <h3>Project 5</h3>
                         </figure>
-                    </div>
+                    </a>
 
-                    <div>
+                    <a class="project" target="_blank" href="/inprogress.html">
                         <figure>
                             <h3>Project 6</h3>
                         </figure>
-                    </div>
+                    </a>
+
                 </figure>  
             </section>
 
@@ -159,11 +224,6 @@
                             <li>Aug 2011 – June 2013</li>
                         </ul>
 
-                        <ul>
-                            <li>Kroger - Pharmacy Technician</li>
-                            <li>Oct 2005 – June 2011</li>
-                        </ul>
-
                     </li>
 
                     <li>
@@ -177,7 +237,7 @@
 
                     <li>
                         <h3>Education</h3>
-                        <ul>
+                        <ul class="education">
                             <li>University of Texas at Austin - Full Stack Web Development Coding Bootcamp - 2020-2021</li>
                             <li>University of Toledo - Master of Biomedical Sciences, Human Donation Science - 2010-2011</li>
                             <li>University of Toledo - Bachelor of Science, Pharmaceutical Sciences - 2005-2010</li>
@@ -208,13 +268,16 @@
     </nav>
 
     <footer>
-        <p>
+
+        <p class="resList">
             Outside Image Resources
             <ul>
-                <!-- For Banner <a href="https://www.freepik.com/vectors/banner">Banner vector created by upklyak - www.freepik.com</a> -->
-                <li class="resource">Banner<span class="bannerRes"><a href="https://www.freepik.com/vectors/banner">Banner vector created by upklyak - www.freepik.com</a></span></li> 
+                <li class="resource">Background<span class="backgroundRes"><a href="https://hipwallpaper.com/night-sky-backgrounds-hd/">Click Here for the Original Image</a></span></li> 
+                <li class="resource">Inprogress Project Cogs<span class="backgroundRes"><a href="https://giphy.com/gifs/static-cogs-stempunk-26tPp6Np4SW7NVJuw">Click Here for the Original Image</a></span></li> 
+
             </ul>
         </p>
+
     </footer>
 
 </body>
