@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Jared Ackley Portfolio</title>
 
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
+        // showSlides(slideIndex);
+        slideIndex = 1;
+        setTimeout(function(){
+            showSlides(1)
+        }, 100);
+
+        setInterval(function(){
+            slideIndex = (slideIndex+1)
+            showSlides(slideIndex)
+        },3000); 
+
         function plusSlides(n) {
-          showSlides(slideIndex += n);
+          showSlides(n);
         }
         
         function currentSlide(n) {
-          showSlides(slideIndex = n);
+          showSlides(n);
         }
         
         function showSlides(n) {
@@ -24,17 +32,18 @@
           var slides = document.getElementsByClassName("mySlides");
           var dots = document.getElementsByClassName("dot");
           if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
+          if(n === slides.length+1){n=1}
           for (i = 0; i < slides.length; i++) {
+              console.log(n);
               slides[i].style.display = "none";  
           }
           for (i = 0; i < dots.length; i++) {
               dots[i].className = dots[i].className.replace(" active", "");
           }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
+          slides[n-1].style.display = "block";  
+          dots[n-1].className += " active";
         }
-        </script>
+    </script>
 
 </head>
 <body class="bg">
@@ -228,7 +237,7 @@
 
                     <li>
                         <h3>Certifictions</h3>
-                        <ul>
+                        <ul class="certifications">
                             <li> <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/5LS678FNQXSP"> University of Michigan - Introduction to Structured Query Language - Issued May 2020</a></li>
                             <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/QQZFUQ88GQUN"> University of Michigan - Building Web Applications in PHP - Issued April 2020</a></li>
                             <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/89W6U3XQPLN5"> Google - Gsuite Administration Specialization - Issued Feb 2020</a></li>
@@ -259,12 +268,12 @@
 
     <nav>
         <ul>
-            <li>About Me</li>
-            <li>My Portfolio</li>
-            <li>My Resume</li>
-            <li>Contact Me</li>
+            <li> <a class="navAnchor" href="#aboutMe">About Me</a></li>
+            <li> <a class="navAnchor" href="#myPortfolio">My Portfolio</a></li>
+            <li> <a class="navAnchor" href="#myResume">My Resume</a></li>
+            <li> <a class="navAnchor" href="#contactMe">Contact Me</a></li>
+
         </ul>
-       
     </nav>
 
     <footer>
@@ -272,8 +281,8 @@
         <p class="resList">
             Outside Image Resources
             <ul>
-                <li class="resource">Background<span class="backgroundRes"><a href="https://hipwallpaper.com/night-sky-backgrounds-hd/">Click Here for the Original Image</a></span></li> 
-                <li class="resource">Inprogress Project Cogs<span class="backgroundRes"><a href="https://giphy.com/gifs/static-cogs-stempunk-26tPp6Np4SW7NVJuw">Click Here for the Original Image</a></span></li> 
+                <li class="resource">Background<span class="backgroundRes"><a target="_blank" href="https://hipwallpaper.com/night-sky-backgrounds-hd/">Click Here for the Original Image</a></span></li> 
+                <li class="resource">Inprogress Project Cogs<span class="backgroundRes"><a target="_blank" href="https://giphy.com/gifs/static-cogs-stempunk-26tPp6Np4SW7NVJuw">Click Here for the Original Image</a></span></li> 
 
             </ul>
         </p>
