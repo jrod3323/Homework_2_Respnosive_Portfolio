@@ -23,4 +23,4 @@ This is a portfoli webpage that has the purpose of showcasing my skills and tale
 
 Jeremy Zhu - [Github Profile](https://github.com/jeishu) 
 
-Joey Zisk - Github Profile 
+Joey Zisk - [Github Profile](https://github.com/fuddafudda) 
